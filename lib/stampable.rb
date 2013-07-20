@@ -166,7 +166,6 @@ module Ddb #:nodoc:
             return unless self.record_userstamp
             if respond_to?(self.deleter_attribute.to_sym) && has_stamper?
               self.send("#{self.deleter_attribute}=".to_sym, self.class.stamper_class.stamper)
-              save
             end
           end
         #end private
